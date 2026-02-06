@@ -1,59 +1,152 @@
-.navbar {
-    background-color: #d4af37;
-    color: white;
-    padding: 10px;
-    text-align: center;
+:root {
+    --gold: #d4af37;
+    --dark-background-1: #0f1f1a;
+    --dark-background-2: #122620;
+    --font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #2e2e2e;
-    color: white;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     margin: 0;
+    padding: 0;
+    background: var(--dark-background-2);
+    color: white;
+    transition: background 0.3s, color 0.3s;
 }
 
-h1, h2, h3 {
-    color: #d4af37;
+header {
+    background: var(--dark-background-1);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.facilities {
-    border: 2px solid #d4af37;
-    margin: 20px;
-    padding: 10px;
+header h1 {
+    color: var(--gold);
+    font-size: 2.5em;
+    transition: color 0.3s;
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
 }
 
-.table th, .table td {
-    border: 1px solid #d4af37;
-    padding: 15px;
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid var(--gold);
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+    background: var(--gold);
+    color: black;
+}
+
+.hero {
+    height: 50vh;
+    background: linear-gradient(135deg, var(--dark-background-1), var(--dark-background-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-.table th {
-    background-color: #d4af37;
-    color: white;
+.hero h2 {
+    font-size: 2.5em;
+    color: var(--gold);
+    transition: color 0.3s;
 }
 
-.table tr:nth-child(even) {
-    background-color: #3a3a3a;
+.facilities {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--dark-background-2), var(--dark-background-1));
+    text-align: center;
 }
 
-.table tr:hover {
-    background-color: #d4af37;
-    color: white;
+.facility {
+    margin: 20px 0;
+}
+
+.pricing-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.pricing-table th, .pricing-table td {
+    border: 1px solid var(--gold);
+    padding: 15px;
+    transition: background 0.3s;
+}
+
+.pricing-table tr:hover {
+    background: var(--gold);
+    color: black;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.testimonials {
+    padding: 60px 20px;
+    background: var(--dark-background-1);
+    text-align: center;
+}
+
+.testimonial {
+    margin: 20px 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--dark-background-2);
+    border-radius: 8px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border: 2px solid white;
+}
+
+footer {
+    padding: 20px;
+    background: var(--dark-background-1);
+    text-align: center;
+}
+
+footer p {
+    color: var(--gold);
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        font-size: 14px;
-        padding: 5px;
+    header h1 {
+        font-size: 2em;
     }
-    .table {
-        font-size: 12px;
+    .hero h2 {
+        font-size: 2em;
+    }
+    .pricing-table, .contact-form {
+        width: 100%;
     }
 }
