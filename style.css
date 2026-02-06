@@ -1,182 +1,59 @@
-/* =========================
-   ROOT VARIABLES
-========================= */
-:root {
-  --gold: #d4af37;              /* Shine Gold */
-  --dark-bg: #0f1f1a;           /* Premium dark background */
-  --dark-bg-2: #122620;         /* Slightly lighter dark */
-  --text-light: #ffffff;
-  --text-muted: rgba(255,255,255,0.85);
-  --border-soft: rgba(255,255,255,0.2);
-}
-
-/* =========================
-   GLOBAL
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.navbar {
+    background-color: #d4af37;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
 body {
-  background: #ffffff;
-  color: #222;
-  line-height: 1.6;
+    background-color: #2e2e2e;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
+h1, h2, h3 {
+    color: #d4af37;
 }
 
-/* =========================
-   FACILITIES SECTION
-========================= */
-.facilities-section {
-  background-color: var(--dark-bg);
-  padding: 90px 20px;
-  text-align: center;
+.facilities {
+    border: 2px solid #d4af37;
+    margin: 20px;
+    padding: 10px;
 }
 
-.facilities-section h2 {
-  color: var(--gold);
-  margin-bottom: 60px;
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
-.facilities-grid {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 50px;
+.table th, .table td {
+    border: 1px solid #d4af37;
+    padding: 15px;
+    text-align: center;
 }
 
-.facility {
-  text-align: center;
+.table th {
+    background-color: #d4af37;
+    color: white;
 }
 
-.icon-box {
-  width: 80px;
-  height: 80px;
-  border: 2px solid var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 18px;
+.table tr:nth-child(even) {
+    background-color: #3a3a3a;
 }
 
-.icon-box i {
-  font-size: 30px;
-  color: var(--gold);
+.table tr:hover {
+    background-color: #d4af37;
+    color: white;
 }
 
-.facility h3 {
-  color: var(--text-light);
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.facility p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-/* Tablet */
-@media (min-width: 600px) {
-  .facilities-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Desktop */
-@media (min-width: 992px) {
-  .facilities-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* =========================
-   MEMBERSHIP PLANS SECTION
-========================= */
-.plans-section {
-  background-color: var(--dark-bg-2);
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.plans-section h2 {
-  color: var(--gold);
-  margin-bottom: 50px;
-}
-
-/* Table Wrapper for Mobile */
-.table-wrapper {
-  overflow-x: auto;
-}
-
-/* Table Styling */
-.plans-table {
-  width: 100%;
-  max-width: 1100px;
-  margin: auto;
-  border-collapse: collapse;
-  background: transparent;
-}
-
-.plans-table th,
-.plans-table td {
-  padding: 16px 14px;
-  border-bottom: 1px solid var(--border-soft);
-  text-align: center;
-  font-size: 0.95rem;
-}
-
-/* Header Row */
-.plans-table thead th {
-  background-color: #0b1713;
-  color: var(--gold);
-  font-weight: 600;
-}
-
-/* First Column */
-.plans-table td:first-child {
-  text-align: left;
-  color: var(--text-light);
-  font-weight: 500;
-}
-
-/* Body Cells */
-.plans-table tbody td {
-  color: var(--text-muted);
-}
-
-/* Hover Effect */
-.plans-table tbody tr:hover {
-  background: rgba(212, 175, 55, 0.08);
-}
-
-/* Note Text */
-.plan-note {
-  margin-top: 35px;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* =========================
-   FADE IN ANIMATION (OPTIONAL)
-========================= */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 14px;
+        padding: 5px;
+    }
+    .table {
+        font-size: 12px;
+    }
 }
