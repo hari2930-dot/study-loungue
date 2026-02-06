@@ -1,0 +1,182 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  --gold: #d4af37;              /* Shine Gold */
+  --dark-bg: #0f1f1a;           /* Premium dark background */
+  --dark-bg-2: #122620;         /* Slightly lighter dark */
+  --text-light: #ffffff;
+  --text-muted: rgba(255,255,255,0.85);
+  --border-soft: rgba(255,255,255,0.2);
+}
+
+/* =========================
+   GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* =========================
+   FACILITIES SECTION
+========================= */
+.facilities-section {
+  background-color: var(--dark-bg);
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.facilities-section h2 {
+  color: var(--gold);
+  margin-bottom: 60px;
+}
+
+.facilities-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.facility {
+  text-align: center;
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.icon-box i {
+  font-size: 30px;
+  color: var(--gold);
+}
+
+.facility h3 {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.facility p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .facilities-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =========================
+   MEMBERSHIP PLANS SECTION
+========================= */
+.plans-section {
+  background-color: var(--dark-bg-2);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.plans-section h2 {
+  color: var(--gold);
+  margin-bottom: 50px;
+}
+
+/* Table Wrapper for Mobile */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table Styling */
+.plans-table {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.plans-table th,
+.plans-table td {
+  padding: 16px 14px;
+  border-bottom: 1px solid var(--border-soft);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Header Row */
+.plans-table thead th {
+  background-color: #0b1713;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* First Column */
+.plans-table td:first-child {
+  text-align: left;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Body Cells */
+.plans-table tbody td {
+  color: var(--text-muted);
+}
+
+/* Hover Effect */
+.plans-table tbody tr:hover {
+  background: rgba(212, 175, 55, 0.08);
+}
+
+/* Note Text */
+.plan-note {
+  margin-top: 35px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   FADE IN ANIMATION (OPTIONAL)
+========================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
