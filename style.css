@@ -10,6 +10,10 @@ body {
     background: #fafaf8;
     color: #1f1f1f;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* COMMON */
 .container {
@@ -207,7 +211,7 @@ a {
 
 .facilities {
     padding: 80px 0;
-    background: #fff;
+    background: #fafaf8;
 }
 
 .section-title {
@@ -265,6 +269,11 @@ a {
     border: 1px solid #eee;
 }
 
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
 .price-card .price {
     font-size: 40px;
     color: #c9a24d;
@@ -287,7 +296,7 @@ a {
 
 .about-lounge {
     padding: 80px 0;
-    background: #fff;
+    background: #fafaf8;
 }
 
 .about-grid {
@@ -398,6 +407,77 @@ a {
     transform: translateX(4px);
 }
 
+/* POPUP BACKDROP */
+.rules-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+/* POPUP BOX */
+.rules-popup-box {
+  background: #fff;
+  width: 100%;
+  max-width: 620px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+/* ACTIVE STATE */
+.rules-popup.show .rules-popup-box {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* CLOSE BUTTON */
+.rules-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* CONTENT */
+.rules-content {
+  display: none;
+}
+
+.rules-content h3 {
+  color: #c9a24d;
+  margin-bottom: 12px;
+}
+
+.rules-content ul {
+  padding-left: 18px;
+}
+
+.rules-content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .rules-popup-box {
+    padding: 20px;
+  }
+}
+
+
 .pricing-note {
     max-width: 800px;
     margin: 30px auto 0;
@@ -500,15 +580,11 @@ a {
     }
 }
 
-/* .site-footer {
-  background: #1f1f1f;
-  color: #fff;
-  padding-top: 60px;
-} */
+
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    grid-template-columns: 2.3fr 1fr 1fr ;
     gap: 40px;
     align-items: start;
 
