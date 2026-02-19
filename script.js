@@ -52,24 +52,3 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-// pricing tab
-function showTab(tabId, btn) {
-    const contents = document.querySelectorAll(".tab-content");
-    const buttons = document.querySelectorAll(".tab-btn");
-    const indicator = document.querySelector(".tab-indicator");
-
-    contents.forEach(c => c.classList.remove("active"));
-    buttons.forEach(b => b.classList.remove("active"));
-
-    document.getElementById(tabId).classList.add("active");
-    btn.classList.add("active");
-
-    indicator.style.width = btn.offsetWidth + "px";
-    indicator.style.transform = `translateX(${btn.offsetLeft}px)`;
-}
-
-/* set indicator position on load */
-window.onload = () => {
-    const activeBtn = document.querySelector(".tab-btn.active");
-    document.querySelector(".tab-indicator").style.width = activeBtn.offsetWidth + "px";
-};
