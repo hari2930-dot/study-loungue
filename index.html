@@ -72,14 +72,14 @@
 
             <!-- Images -->
             <div class="about-images">
-                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="">
-                <img src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0" alt="">
-                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da" alt="">
+                <img src="banner.png" alt="">
+                <img src="banner2.png" alt="">
+                <img src="banner3.png" alt="">
             </div>
 
             <!-- Content -->
             <div class="about-content" id="about">
-                <h2>What does <span>Study Loungue</span> do?</h2>
+                <h2>What does <span>AM Study Loungue</span> do?</h2>
 
                 <p>
                     <strong>STUDY LOUNGUE</strong> is a premium reading and study room
@@ -128,30 +128,9 @@
                 </div>
 
                 <div class="facility-card">
-                    <div class="icon">🔌</div>
-                    <h3>Plug Points</h3>
-                    <p>Access to power outlets for charging devices.</p>
-                </div>
-                <div class="facility-card">
-                    <div class="icon">📁</div>
-                    <h3>Folder Space</h3>
-                    <p>Personal folder space for organizing study materials.</p>
-                </div>
-
-                <div class="facility-card">
                     <div class="icon">🔇</div>
                     <h3>Silent Zone</h3>
                     <p>Noise-free environment to maximize focus.</p>
-                </div>
-                <div class="facility-card">
-                    <div class="icon">💡</div>
-                    <h3>Well-Lit</h3>
-                    <p>Optimal lighting for comfortable and focused study sessions.</p>
-                </div>
-                <div class="facility-card">
-                    <div class="icon">☕</div>
-                    <h3>Break Area</h3>
-                    <p>Open break area for fresh air and short breaks.</p>
                 </div>
 
                 <div class="facility-card">
@@ -159,11 +138,33 @@
                     <h3>Air Conditioned</h3>
                     <p>Perfect temperature for a calm learning space.</p>
                 </div>
+
+                <div class="facility-card">
+                    <div class="icon">🔌</div>
+                    <h3>Plug Points</h3>
+                    <p>Access to power outlets for charging devices.</p>
+                </div>
+                 <div class="facility-card">
+                    <div class="icon">☕</div>
+                    <h3>Break Area</h3>
+                    <p>Open break area for fresh air and short breaks.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="icon">📁</div>
+                    <h3>Folder Space</h3>
+                    <p>Personal folder space for organizing study materials.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="pricing" id="membership">
+        <div class="pricing-tabs">
+    <button class="tab-btn active" onclick="showTab('normal', this)">Normal</button>
+    <button class="tab-btn" onclick="showTab('special', this)">Special</button>
+    <span class="tab-indicator"></span>
+</div>
+
         <div class="container">
             <h2 class="section-title">Membership Plans</h2>
 
@@ -171,8 +172,9 @@
 
                 <div class="price-card">
                     <h3>Daily Pass</h3>
-                    <div class="price">₹99</div>
+                    <div class="price">₹199</div>
                     <ul>
+                        <li>✔ 1Day Access</li>
                         <li>✔ Silent Zone</li>
                         <li>✔ Wi-Fi</li>
                         <li>✔ AC</li>
@@ -182,16 +184,17 @@
 
                 <div class="price-card featured">
                     <h3>Monthly</h3>
-                    <div class="price">₹1999</div>
+                    <div class="price">₹2999</div>
                     <ul>
-                        <li>✔ Unlimited Access</li>
-                        <li>✔ Priority Seating</li>
-                        <li>✔ Locker Facility</li>
+                        <li>✔ 30Days Access</li>
+                        <li>✔ Reserved Seating</li>
+                        <li>✔ WI-FI + Power</li>
+                        <li>✔ Full Facilities Access</li>
                     </ul>
                     <a href="#" class="btn-secondary">Most Popular</a>
                 </div>
 
-                <div class="price-card">
+                <!-- <div class="price-card">
                     <h3>Quarterly</h3>
                     <div class="price">₹5499</div>
                     <ul>
@@ -200,15 +203,11 @@
                         <li>✔ Free Coffee</li>
                     </ul>
                     <a href="#" class="btn-outline">Choose</a>
-                </div>
+                </div> -->
 
             </div>
             <p class="pricing-note">
                 Prices listed above are inclusive of <strong>18% Goods and Services Tax (GST)</strong>.<br>
-                <span>
-                    *Please inform us of your preferred <strong>7-hour slot</strong> at the time of joining.
-                    This cannot be changed during your membership.
-                </span>
             </p>
 
         </div>
