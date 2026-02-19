@@ -747,3 +747,38 @@ a {
     color: #fff;
     padding-top: 60px;
 }
+
+/* Make card position relative */
+.offer-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ribbon Style */
+.ribbon {
+    position: absolute;
+    top: 15px;
+    right: -45px;
+    background: linear-gradient(45deg, #d10000, #ff3c3c);
+    color: #fff;
+    padding: 8px 50px;
+    font-size: 12px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Old price (strike) */
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+/* Offer price highlight */
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c9a24d; /* your gold color */
+}
