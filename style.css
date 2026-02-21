@@ -212,12 +212,31 @@ a {
 .facilities {
   background: linear-gradient(135deg, #f8f5ef, #ece6d9);
   padding: 80px 5%;
-  font-family: 'Poppins', sans-serif;
 }
+
+/* Title Styling */
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 60px;
+  font-size: 16px;
+}
+
+/* FIXED GRID */
 .facilities .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .facility-card {
@@ -230,20 +249,17 @@ a {
   border-top: 3px solid transparent;
 }
 
-/* Desktop Hover */
 .facility-card:hover {
   transform: translateY(-8px);
   border-top: 3px solid #c9a227;
   box-shadow: 0 15px 30px rgba(0,0,0,0.08);
 }
 
-/* Mobile Tap Effect */
 .facility-card:active {
   transform: translateY(-6px);
   border-top: 3px solid #c9a227;
 }
 
-/* Icon Circle */
 .icon-circle {
   width: 95px;
   height: 95px;
@@ -256,7 +272,6 @@ a {
   animation: float 4s ease-in-out infinite;
 }
 
-/* Lucide Icons Styling */
 .icon-circle svg {
   width: 36px;
   height: 36px;
@@ -264,7 +279,6 @@ a {
   stroke-width: 2;
 }
 
-/* Floating Animation */
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
