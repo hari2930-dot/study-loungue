@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AM Study Loungue</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AM Study Lounge</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="container nav-wrapper">
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="container nav-wrapper">
 
-            <div class="logo">
-                <img src="logo.png" alt="logo">
-            </div>
+<div class="logo">
+<img src="logo.png" alt="logo">
+</div>
 
-            <nav class="nav">
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#about" onclick="closeMenu()">About</a></li>
-                    <li><a href="#facilities" onclick="closeMenu()">Facilities</a></li>
-                    <li><a href="#" onclick="closeMenu()">Gallery</a></li>
-                    <li><a href="#membership" onclick="closeMenu()">Membership</a></li>
-                    <li><a href="#rules" onclick="closeMenu()">Rules</a></li>
-                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-                    </ul>
-            </nav>
+<nav class="nav">
+<ul class="nav-links" id="navLinks">
+<li><a href="#about" onclick="closeMenu()">About</a></li>
+<li><a href="#facilities" onclick="closeMenu()">Facilities</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#membership" onclick="closeMenu()">Membership</a></li>
+<li><a href="#rules" onclick="closeMenu()">Rules</a></li>
+<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+</ul>
+</nav>
 
-            <div class="hamburger" onclick="toggleMenu()">
-                ☰
-            </div>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
 
-        </div>
-    </header>
+</div>
+</header>
 
 
     <!-- HERO SECTION -->
@@ -446,47 +451,51 @@ Prices listed above are inclusive of <strong>18% GST</strong>.
     </div>
   </div>
 </div>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-         lucide.createIcons();
-    </script>
-</body>
+<script src="https://unpkg.com/lucide@latest"></script>
 
-    
-    function toggleMenu() {
-        document.getElementById("navLinks").classList.toggle("show");
-    }
-    function closeMenu() {
-  document.getElementById("navLinks").classList.remove("show");
+<script>
+lucide.createIcons();
+
+/* Mobile Menu */
+function toggleMenu() {
+document.getElementById("navLinks").classList.toggle("show");
 }
 
-    window.addEventListener("scroll", function () {
-        const header = document.querySelector(".navbar");
-        header.classList.toggle("scrolled", window.scrollY > 10);
-    });
-     function openRules(id) {
-    document.querySelectorAll(".rules-content").forEach(el => {
-      el.style.display = "none";
-    });
+function closeMenu() {
+document.getElementById("navLinks").classList.remove("show");
+}
 
-    document.getElementById(id).style.display = "block";
-    const popup = document.getElementById("rulesPopup");
-    popup.style.display = "flex";
-    setTimeout(() => popup.classList.add("show"), 10);
-  }
+/* Navbar Scroll Effect */
+window.addEventListener("scroll", function () {
+const header = document.querySelector(".navbar");
+header.classList.toggle("scrolled", window.scrollY > 10);
+});
 
-  function closeRules() {
-    const popup = document.getElementById("rulesPopup");
-    popup.classList.remove("show");
-    setTimeout(() => popup.style.display = "none", 200);
-  }
+/* Rules Popup */
+function openRules(id) {
+document.querySelectorAll(".rules-content").forEach(el => {
+el.style.display = "none";
+});
 
-  // close on outside click
-  document.getElementById("rulesPopup").addEventListener("click", e => {
-    if (e.target.id === "rulesPopup") closeRules();
-  });
-// pricing member ship 
+document.getElementById(id).style.display = "block";
+const popup = document.getElementById("rulesPopup");
+popup.style.display = "flex";
+setTimeout(() => popup.classList.add("show"), 10);
+}
+
+function closeRules() {
+const popup = document.getElementById("rulesPopup");
+popup.classList.remove("show");
+setTimeout(() => popup.style.display = "none", 200);
+}
+
+document.getElementById("rulesPopup").addEventListener("click", e => {
+if (e.target.id === "rulesPopup") closeRules();
+});
+
+/* Pricing Tabs */
 function switchTab(tab, btn) {
+
 document.querySelectorAll('.pricing-content')
 .forEach(el => el.classList.remove('active'));
 
@@ -498,4 +507,5 @@ btn.classList.add('active');
 }
 </script>
 
+</body>
 </html>
