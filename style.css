@@ -214,7 +214,7 @@ a {
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
+.facilities .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
