@@ -208,91 +208,80 @@ a {
         display: flex;
     }
 }
-/*facilities section  */
-.facilities-section {
-  background: linear-gradient(135deg, #f8f5ef, #ece6d9); /* Light luxury */
-  padding: 90px 0;
+.facilities {
+  background: linear-gradient(135deg, #f8f5ef, #ece6d9);
+  padding: 80px 5%;
   font-family: 'Poppins', sans-serif;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 38px;
-  font-weight: 600;
-  color: #1c1c1c;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #555;
-  margin-bottom: 60px;
-}
-
-.facilities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
 }
 
 .facility-card {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 14px;
+  background: #efefef;
+  padding: 60px 30px;
+  border-radius: 25px;
   text-align: center;
-  transition: 0.4s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   border-top: 3px solid transparent;
 }
 
+/* Desktop Hover */
 .facility-card:hover {
   transform: translateY(-8px);
-  border-top: 3px solid #c9a227; /* Gold accent */
+  border-top: 3px solid #c9a227;
   box-shadow: 0 15px 30px rgba(0,0,0,0.08);
 }
 
-/* Professional Icon Circle */
-.icon {
-  width: 70px;
-  height: 70px;
+/* Mobile Tap Effect */
+.facility-card:active {
+  transform: translateY(-6px);
+  border-top: 3px solid #c9a227;
+}
+
+/* Icon Circle */
+.icon-circle {
+  width: 95px;
+  height: 95px;
   margin: 0 auto 25px;
+  background: #e6e1d8;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: rgba(201,162,39,0.08);
   animation: float 4s ease-in-out infinite;
 }
 
-.icon svg {
-  width: 30px;
-  height: 30px;
-  stroke: #c9a227; /* Gold color */
-  stroke-width: 1.8;
-  fill: none;
+/* Lucide Icons Styling */
+.icon-circle svg {
+  width: 36px;
+  height: 36px;
+  stroke: #c9a227;
+  stroke-width: 2;
 }
 
-/* Subtle Floating Animation */
+/* Floating Animation */
 @keyframes float {
-  0% { transform: translateY(0px); }
+  0% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
-  100% { transform: translateY(0px); }
+  100% { transform: translateY(0); }
 }
 
 .facility-card h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 12px;
   color: #1c1c1c;
+  font-weight: 600;
 }
 
 .facility-card p {
-  font-size: 14px;
-  color: #666;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
 }
 /*pricing tab  */
 .pricing {
