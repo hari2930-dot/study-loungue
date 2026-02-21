@@ -214,11 +214,6 @@ a {
   padding: 80px 5%;
   font-family: 'Poppins', sans-serif;
 }
-.facilities-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-}
 .facilities .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
