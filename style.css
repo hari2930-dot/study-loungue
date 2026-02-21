@@ -471,12 +471,13 @@ a {
 
 .about-images {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 16px;
 }
 
 .about-images img {
     width: 100%;
+    height : 250px;
     border-radius: 12px;
     object-fit: cover;
 }
