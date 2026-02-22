@@ -893,20 +893,55 @@ a {
     font-size: 14px;
     color: #aaa;
 }
-/* footer mobile view */
 @media (max-width: 600px) {
 
-  /* SOCIAL */
-  .footer-social h4 {
-    font-size: 20px;
+  .footer-social {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 999;
   }
 
   .social-btn {
-    width: 100%;
+    width: 45px;
+    height: 45px;
+    display: flex;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(6px);
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease, background 0.3s ease;
   }
+
+  .social-btn i {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  /* Tap / Hover Effect */
+  .social-btn:active,
+  .social-btn:hover {
+    transform: scale(1.15);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Hide any social text */
+  .social-btn span {
+    display: none;
+  }
+
+  /* Add space so content doesn't hide behind bar */
+  body {
+    padding-bottom: 70px;
+  }
+}
 
   /* MAP – MOBILE OPTIMIZED */
   .footer-map {
