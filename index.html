@@ -24,7 +24,10 @@
 <div class="container nav-wrapper">
 
 <div class="logo">
-<img src="logo.png" alt="logo">
+<a href="#home" class="logo">
+    <img src="logo.png" alt="AM Study Lounge Logo">
+    <span class="logo-text">AM Study Lounge</span>
+</a>
 </div>
 
 <nav class="nav">
@@ -97,6 +100,38 @@
            </div>
         </div>
     </section>
+    <section class="gallery" id="gallery">
+  <div class="container">
+
+    <h2 class="section-title">Our Gallery</h2>
+    <p class="section-subtitle">
+      Experience the calm and focused environment at AM Study Lounge.
+    </p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item"><img src="gallery1.png" alt=""></div>
+      <div class="gallery-item"><img src="gallery2.png" alt=""></div>
+      <div class="gallery-item"><img src="gallery3.png" alt=""></div>
+      <div class="gallery-item"><img src="gallery4.png" alt=""></div>
+      <div class="gallery-item"><img src="gallery5.png" alt=""></div>
+      <div class="gallery-item"><img src="gallery6.png" alt=""></div>
+      <div class="gallery-item"><img src="gallery7.png" alt=""></div>
+      <div class="gallery-item"><img src="gallery8.png" alt=""></div>
+      <div class="gallery-item"><img src="gallery9.png" alt=""></div>
+      <div class="gallery-item"><img src="gallery10.png" alt=""></div>      
+      <div class="gallery-item"><img src="gallery11.png" alt=""></div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+</div>
 <section class="facilities" id="facilities">
 
   <h2 class="section-title">Our Facilities</h2>
@@ -504,6 +539,31 @@ document.querySelectorAll('.tab-btn')
 document.getElementById(tab).classList.add('active');
 btn.classList.add('active');
 }
+/* Lightbox */
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.addEventListener('click', function() {
+    document.getElementById('lightbox').style.display = 'flex';
+    document.getElementById('lightbox-img').src = this.src;
+  });
+});
+
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+/* Fade-in animation on scroll */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+  observer.observe(item);
+});
+
 </script>
 
 </body>
