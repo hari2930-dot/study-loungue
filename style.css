@@ -14,6 +14,7 @@ body {
 .whatsapp-float {
   position: fixed !important;
   z-index: 2147483647 !important;
+  color: white;
 }
 
 html {
@@ -1127,4 +1128,5 @@ a {
     display: none;
   }
 }
+
 
