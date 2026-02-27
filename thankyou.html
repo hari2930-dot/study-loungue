@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You | AM Study Lounge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #fafaf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fade Animation */
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.thankyou-box {
+    background: #ffffff;
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    text-align: center;
+    max-width: 500px;
+    z-index: 2;
+}
+
+.check-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c9a24d, #9e7c2f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #1f1f1f;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #c9a24d, #9e7c2f);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    background: #c9a24d;
+    opacity: 0.8;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100vh) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+</style>
+</head>
+<body>
+
+<div class="thankyou-box fade-in">
+    <div class="check-icon">✓</div>
+    <h1>Thank You!</h1>
+    <p>Your message has been sent successfully.<br>
+    We will contact you shortly.</p>
+    <!-- <p>Redirecting to home in 5 seconds...</p> -->
+    <a href="index.html" class="back-btn">Back Now</a>
+</div>
+
+<script>
+/* Auto Redirect */
+setTimeout(function(){
+    window.location.href = "index.html";
+}, 5000);
+
+/* Confetti Generator */
+for (let i = 0; i < 40; i++) {
+    let confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
+    confetti.style.background = ["#c9a24d","#9e7c2f","#ffcc66","#ffffff"][Math.floor(Math.random()*4)];
+    document.body.appendChild(confetti);
+}
+</script>
+
+</body>
+</html>
