@@ -225,6 +225,44 @@ a {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
+
+/* ========================= */
+/* 📱 MOBILE RESPONSIVENESS */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 50px 16px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr; /* stack layout */
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
+        width: 100%; /* full width buttons */
+        text-align: center;
+    }
+}
+
+
 /* ===== ABOUT ===== */
 .about-lounge {
     padding: 10px 0;
@@ -266,8 +304,6 @@ a {
     .about-images {
         grid-template-columns: 1fr;
     }
-
-
 }
 
 .about-content h2 {
