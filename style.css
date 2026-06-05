@@ -1043,7 +1043,7 @@ a {
     }
 
     /* KEEP CONTACT SECTION HORIZONTAL */
-    .contact-section {
+    .contact-section1 {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
